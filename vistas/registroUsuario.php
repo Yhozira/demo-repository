@@ -106,7 +106,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <div class="registro-container">
-        <h1>Regístrate como Cliente</h1>
+        <h1>Registrate como Cliente</h1>
         
         <?php if ($error): ?>
             <p class="error"><?= htmlspecialchars($error) ?></p>
