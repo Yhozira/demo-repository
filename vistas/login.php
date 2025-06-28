@@ -35,28 +35,104 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Login - Librería</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #cce7f7, #e6f5ff);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: #ffffff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #0077b6;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #a0d8ef;
+            border-radius: 6px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #00b4d8;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0096c7;
+        }
+
+        a {
+            color: #0077b6;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .error {
+            color: red;
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Iniciar sesión</h1>
+    <div class="login-container">
+        <h1>Iniciar sesión</h1>
 
-    <?php if ($error): ?>
-        <p style="color: red;"><?= htmlspecialchars($error) ?></p>
-    <?php endif ?>
+        <?php if ($error): ?>
+            <p class="error"><?= htmlspecialchars($error) ?></p>
+        <?php endif ?>
 
-    <form method="post" action="login.php">
-        <label>
-            Correo:<br>
-            <input type="email" name="correo" required>
-        </label><br><br>
+        <form method="post" action="login.php">
+            <label>
+                Correo:<br>
+                <input type="email" name="correo" required>
+            </label>
 
-        <label>
-            Contraseña:<br>
-            <input type="password" name="contrasena" required>
-        </label><br><br>
+            <label>
+                Contraseña:<br>
+                <input type="password" name="contrasena" required>
+            </label>
 
-        <button type="submit">Iniciar sesión</button>
-    </form>
+            <button type="submit">Iniciar sesión</button>
+        </form>
 
-    <p>¿No tienes cuenta? <a href="registroUsuario.php">Regístrate aquí</a></p>
+        <p>¿No tienes cuenta? <a href="registroUsuario.php">Regístrate aquí</a></p>
+    </div>
 </body>
 </html>
