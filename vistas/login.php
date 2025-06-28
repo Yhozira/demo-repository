@@ -129,7 +129,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <input type="password" name="contrasena" required>
             </label>
 
-            <button type="submit">Iniciar sesión</button>
+            <button type="submit">Iniciar sesion</button>
         </form>
 
         <p>¿No tienes cuenta? <a href="registroUsuario.php">Regístrate aquí</a></p>
