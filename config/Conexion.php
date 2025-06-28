@@ -8,7 +8,7 @@ class Conexion {
         // Ajusta aquí tu nombre de base de datos
         $this->dsn      = "mysql:host=localhost;dbname=libreria;charset=utf8";
         $this->username = "root";
-        $this->password = "Jorge26Salazar";
+        $this->password = "";
     }
 
     public function iniciar() {
